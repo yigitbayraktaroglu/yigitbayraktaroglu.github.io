@@ -1,12 +1,55 @@
-.center {
-  margin-left: auto;
-  margin-right: auto;
+html {
+  font-family: "Open Sans", sans-serif;
 }
 
-table,
-tr,
-td {
-  border: 2px solid;
-  border-color: red;
-  overflow-wrap: break-word;
+img {
+  height: 20vh;
+}
+a {
+  text-decoration: none;
+}
+
+.left {
+  text-align: center;
+  height: 100%;
+  width: 20vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #fff1e6;
+  color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.left .links {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.left .links i {
+  margin: 10px;
+}
+
+.fa-solid,
+.fa-brands,
+.fa-regular {
+  color: #111;
+}
+
+.left .nav a {
+  color: #111;
+}
+
+.left .nav i {
+  margin-right: 5px;
+}
+
+.right {
+  margin-left: 21vw;
+}
+
+.box {
+  padding: 5px;
+  border: 2px solid #111;
+  border-radius: 10px;
 }
