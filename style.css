@@ -1,7 +1,24 @@
 html {
   font-family: "Open Sans", sans-serif;
 }
+header {
+  background-color: #d4a373;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  position: absolute;
 
+  height: 10vh;
+  display: block;
+  top: 0;
+  left: 0;
+}
+header h1 {
+  margin: 10px;
+}
+.content {
+  margin-top: 11vh;
+}
 img {
   height: 20vh;
 }
@@ -14,13 +31,13 @@ a {
   height: 100%;
   width: 20vw;
   position: fixed;
+  padding-top: 11vh;
   z-index: 1;
   top: 0;
   left: 0;
   background-color: #fff1e6;
   color: #111;
   overflow-x: hidden;
-  padding-top: 20px;
 }
 .left .links {
   margin-top: 20px;
@@ -52,4 +69,19 @@ a {
   padding: 5px;
   border: 2px solid #111;
   border-radius: 10px;
+}
+
+footer {
+  background-color: #d4a373;
+  text-align: center;
+  overflow-x: hidden;
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+footer i {
+  margin-right: 10px;
 }
