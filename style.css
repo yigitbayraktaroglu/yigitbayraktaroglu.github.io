@@ -1,24 +1,25 @@
-html {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
 }
-header {
-  background-color: #d4a373;
-  z-index: 2;
-  text-align: center;
-  width: 100%;
-  position: absolute;
 
+body {
+  padding: 20px;
+}
+
+header {
+  display: none;
+}
+
+header img {
   height: 10vh;
-  display: block;
-  top: 0;
-  left: 0;
 }
-header h1 {
-  margin: 10px;
+header i {
+  margin-left: 10px;
 }
-.content {
-  margin-top: 11vh;
-}
+
 img {
   height: 20vh;
 }
@@ -31,7 +32,8 @@ a {
   height: 100%;
   width: 20vw;
   position: fixed;
-  padding-top: 11vh;
+  /* padding-top: 11vh; */
+  padding: 20px;
   z-index: 1;
   top: 0;
   left: 0;
@@ -54,7 +56,10 @@ a {
 }
 
 .left .nav a {
+  display: block;
   color: #111;
+  margin-top: 10px;
+  text-align: justify;
 }
 
 .left .nav i {
@@ -66,9 +71,13 @@ a {
 }
 
 .box {
-  padding: 5px;
+  padding: 10px 20px;
   border: 2px solid #111;
   border-radius: 10px;
+  margin-top: 20px;
+}
+.box div {
+  margin-top: 10px;
 }
 
 footer {
@@ -84,4 +93,51 @@ footer {
 }
 footer i {
   margin-right: 10px;
+}
+#projects a {
+  text-decoration: none;
+  color: blue;
+}
+.checked {
+  color: orange;
+}
+
+#talent h3 {
+  display: inline-block;
+  width: 220px;
+}
+#talent i {
+  margin-right: 5px;
+}
+.display {
+  display: block;
+}
+.none-display {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .left {
+    display: none;
+  }
+  .right {
+    margin-left: 0px;
+    margin-top: 11vh;
+  }
+  #talent h3 {
+    display: block;
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff1e6;
+    z-index: 2;
+    text-align: center;
+    padding-right: 10px;
+    width: 100%;
+    position: fixed;
+    height: 10vh;
+    top: 0;
+    left: 0;
+  }
 }
