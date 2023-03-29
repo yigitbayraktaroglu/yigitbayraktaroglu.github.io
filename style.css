@@ -73,6 +73,8 @@ a {
 
 .right {
   margin-left: 21vw;
+  display: flex;
+  flex-direction: column;
 }
 
 .box {
@@ -116,6 +118,7 @@ footer i {
 #talent i {
   margin-right: 5px;
 }
+
 .display {
   display: block;
 }
