@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -20,12 +21,17 @@ header img {
 header i {
   margin-left: 10px;
 }
-
+i {
+  color: #111;
+}
 img {
   height: 20vh;
+  transition: all 0.3s linear;
 }
-a {
-  text-decoration: none;
+img:hover {
+  cursor: pointer;
+  opacity: 0.2;
+  transform: scale(1.1);
 }
 
 .left {
@@ -50,25 +56,35 @@ a {
   margin-bottom: 20px;
 }
 
-.fa-solid,
-.fa-brands,
-.fa-regular {
-  color: #111;
+.links a i {
+  transition: all 0.3s linear;
 }
+
+.links a:hover i {
+  transform: scale(1.25);
+}
+
 .left .nav {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
 }
 .left .nav a {
   display: block;
   color: #111;
+  border: 1px solid #111;
+  border-radius: 15px;
   margin-top: 10px;
-  text-align: justify;
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.3s linear;
 }
 
-.left .nav i {
-  margin-right: 5px;
+.left .nav a:hover {
+  background-color: #111;
+  color: #fff1e6;
 }
 
 .right {
@@ -79,9 +95,10 @@ a {
 
 .box {
   padding: 10px 20px;
-  border: 2px solid #111;
+  /* border: 2px solid #111; */
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 40px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 .box div {
   margin-top: 10px;
