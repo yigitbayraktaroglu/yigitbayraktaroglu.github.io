@@ -2,6 +2,10 @@ const gameBoard = document.querySelector("#gameBoard");
 const ctx = gameBoard.getContext("2d");
 const scoreText = document.querySelector("#scoreText");
 const resetBtn = document.querySelector("#resetBtn");
+const leftBtn = document.querySelector("#leftBtn");
+const rightBtn = document.querySelector("#rightBtn");
+const uptBtn = document.querySelector("#upBtn");
+const downBtn = document.querySelector("#downBtn");
 const gameWidth = gameBoard.width;
 const gameHeight = gameBoard.height;
 const boardBackground = "white";
@@ -25,6 +29,12 @@ let snake = [
 ];
 
 window.addEventListener("keydown", changeDirection);
+
+leftBtn.addEventListener("click", btnchangeDirection);
+rightBtn.addEventListener("click", btnchangeDirection);
+uptBtn.addEventListener("click", btnchangeDirection);
+downBtn.addEventListener("click", btnchangeDirection);
+
 resetBtn.addEventListener("click", resetGame);
 
 gameStart();
@@ -93,6 +103,7 @@ function drawSnake() {
 }
 function changeDirection(event) {
   const keyPressed = event.keyCode;
+
   const LEFT = 37;
   const UP = 38;
   const RIGHT = 39;
@@ -117,6 +128,37 @@ function changeDirection(event) {
       yVelocity = 0;
       break;
     case keyPressed == DOWN && !goingUp:
+      xVelocity = 0;
+      yVelocity = unitSize;
+      break;
+  }
+}
+function btnchangeDirection(e) {
+  const btnClicked = e.target.id;
+  const LEFT = "leftBtn";
+  const UP = "upBtn";
+  const RIGHT = "rightBtn";
+  const DOWN = "downBtn";
+
+  const goingUp = yVelocity == -unitSize;
+  const goingDown = yVelocity == unitSize;
+  const goingRight = xVelocity == unitSize;
+  const goingLeft = xVelocity == -unitSize;
+
+  switch (true) {
+    case btnClicked == LEFT && !goingRight:
+      xVelocity = -unitSize;
+      yVelocity = 0;
+      break;
+    case btnClicked == UP && !goingDown:
+      xVelocity = 0;
+      yVelocity = -unitSize;
+      break;
+    case btnClicked == RIGHT && !goingLeft:
+      xVelocity = unitSize;
+      yVelocity = 0;
+      break;
+    case btnClicked == DOWN && !goingUp:
       xVelocity = 0;
       yVelocity = unitSize;
       break;
@@ -151,7 +193,7 @@ function displayGameOver() {
   running = false;
 }
 function checkWin() {
-  if (score == 1) {
+  if (score == 20) {
     winStatus = true;
     running = false;
   }
